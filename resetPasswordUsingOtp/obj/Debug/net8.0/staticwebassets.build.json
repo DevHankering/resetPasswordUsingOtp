@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "7l5dlsoTfJ9yAJVkpjz9p9TmZ+LgxaU7FNnPly2UD98=",
+  "Source": "resetPasswordUsingOtp",
+  "BasePath": "_content/resetPasswordUsingOtp",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

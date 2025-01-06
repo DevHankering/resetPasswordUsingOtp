@@ -1,0 +1,150 @@
+[
+  {
+    "ContainingType": "resetPasswordUsingOtp.Controllers.OtpController",
+    "Method": "ChangePassword",
+    "RelativePath": "api/Otp/ChangePassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "changePasswordModel",
+        "Type": "resetPasswordUsingOtp.Models.ChangePasswordModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "resetPasswordUsingOtp.Controllers.OtpController",
+    "Method": "DeleteUser",
+    "RelativePath": "api/Otp/DeleteUser",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "resetPasswordUsingOtp.Models.DeleteModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "resetPasswordUsingOtp.Controllers.OtpController",
+    "Method": "ForgetPassword",
+    "RelativePath": "api/Otp/ForgetPassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "changePasswordModel",
+        "Type": "resetPasswordUsingOtp.Models.ForgetPassword",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "resetPasswordUsingOtp.Controllers.OtpController",
+    "Method": "GetAllData",
+    "RelativePath": "api/Otp/GetAllUsers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[resetPasswordUsingOtp.Models.User, resetPasswordUsingOtp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "resetPasswordUsingOtp.Controllers.OtpController",
+    "Method": "Login",
+    "RelativePath": "api/Otp/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "resetPasswordUsingOtp.Models.LoginRequestModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "resetPasswordUsingOtp.Controllers.OtpController",
+    "Method": "Register",
+    "RelativePath": "api/Otp/RegisterUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registerModel",
+        "Type": "resetPasswordUsingOtp.Models.RegisterModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "resetPasswordUsingOtp.Controllers.OtpController",
+    "Method": "RequestForOtp",
+    "RelativePath": "api/Otp/RequestForOtp",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "changePasswordModel",
+        "Type": "resetPasswordUsingOtp.Models.RequestForOtp",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "resetPasswordUsingOtp.Controllers.OtpController",
+    "Method": "VerifyOtp",
+    "RelativePath": "api/Otp/verify",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "resetPasswordUsingOtp.Models.VerifyOtpRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "resetPasswordUsingOtp.Controllers.OtpController",
+    "Method": "ChangePasswordWithOtp",
+    "RelativePath": "api/Otp/VerifyOtpAndChangePassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "changePasswordModel",
+        "Type": "resetPasswordUsingOtp.Models.ResetPasswordWithOtp",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
