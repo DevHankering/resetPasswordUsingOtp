@@ -1,6 +1,38 @@
 [
   {
     "ContainingType": "resetPasswordUsingOtp.Controllers.OtpController",
+    "Method": "AddRole",
+    "RelativePath": "api/Otp/add-role",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "role",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "resetPasswordUsingOtp.Controllers.OtpController",
+    "Method": "AssignRole",
+    "RelativePath": "api/Otp/assign-role",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "resetPasswordUsingOtp.Models.UserRole",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "resetPasswordUsingOtp.Controllers.OtpController",
     "Method": "ChangePassword",
     "RelativePath": "api/Otp/ChangePassword",
     "HttpMethod": "POST",

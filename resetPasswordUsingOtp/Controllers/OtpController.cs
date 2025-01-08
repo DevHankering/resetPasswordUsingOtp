@@ -26,8 +26,9 @@ namespace resetPasswordUsingOtp.Controllers
         private readonly OtpService otpService;
         private readonly IEmailService emailService;
         private readonly IMemoryCache cache;
+        private readonly RoleManager<IdentityRole> roleManager;
 
-        public OtpController(OtpDbContext   _db, UserManager<IdentityUser> userManager,ITokenRepository tokenRepository, OtpService otpService, IEmailService emailService, IMemoryCache cache)
+        public OtpController(OtpDbContext   _db, UserManager<IdentityUser> userManager,ITokenRepository tokenRepository, OtpService otpService, IEmailService emailService, IMemoryCache cache,RoleManager<IdentityRole> roleManager)
         {
             db = _db;
             this.userManager = userManager;
@@ -35,6 +36,7 @@ namespace resetPasswordUsingOtp.Controllers
             this.otpService = otpService;
             this.emailService = emailService;
             this.cache = cache;
+            this.roleManager = roleManager;
         }
 
         [HttpPost]
@@ -341,6 +343,41 @@ namespace resetPasswordUsingOtp.Controllers
             var users = await db.Users.ToListAsync();
             return Ok(users);
            
+        }
+
+        [HttpPost]
+        [Route("add-role")]
+        public async Task<IActionResult> AddRole([FromBody] string role)
+        {
+           if(!await roleManager.RoleExistsAsync(role))
+            {
+                var result = await roleManager.CreateAsync(new IdentityRole(role));
+                if(result.Succeeded)
+                {
+                    return Ok("Role added successfully");
+                }
+                return BadRequest(result.Errors);
+            }
+            return BadRequest("Role already Exist");
+        }
+
+        [HttpPost]
+        [Route("assign-role")]
+
+        public async Task<IActionResult> AssignRole([FromBody] UserRole model)
+        {
+            var user = await userManager.FindByNameAsync(model.Username);
+            if(user == null)
+            {
+                return BadRequest("user not found");
+            }
+            var result = await userManager.AddToRoleAsync(user, model.Role);
+
+            if (result.Succeeded)
+            {
+                return Ok("Role assigned successfully");
+            }
+            return BadRequest(result.Errors);
         }
 
     }

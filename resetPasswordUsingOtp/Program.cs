@@ -71,7 +71,7 @@ options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")
 //Add IdentityUser to the application
 builder.Services.AddIdentityCore<IdentityUser>()
     .AddRoles<IdentityRole>()
-    .AddTokenProvider<DataProtectorTokenProvider<IdentityUser>>("NZWalks")
+    .AddTokenProvider<DataProtectorTokenProvider<IdentityUser>>("NZWalks")  
     .AddEntityFrameworkStores<OtpDbContext>()
     .AddDefaultTokenProviders();
 
